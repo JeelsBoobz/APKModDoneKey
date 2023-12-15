@@ -1,6 +1,7 @@
 name: Auto Change DialogWeb-Vi-En
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '*/1 * * * *'
 
@@ -29,5 +30,5 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
           
